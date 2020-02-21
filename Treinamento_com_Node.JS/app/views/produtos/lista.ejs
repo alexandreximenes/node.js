@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lista de documentos</title>
+    <link rel="stylesheet" href="./app/views/produtos/jquery.dataTables.min.css">
+</head>
+<body>
+    <table id="tabela-produto">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>PRODUTO</th>
+                <th>OBSERVAÇÕES</th>
+                <th>VALOR</th>
+            </tr>
+        </thead>
+        <tbody>
+                <%for(var i=0;i<lista.length;i++) {%>
+                <tr>
+                    <td><%=lista[i].id%></td>
+                    <td><%=lista[i].titulo%></td>
+                    <td><%=lista[i].descricao%></td>
+                    <td><%=lista[i].preco%></td>
+                </tr>
+            <%}%>        
+        </tbody>
+    </table>
+    <script src="./app/views/produtos/jquery-3.2.1.min.js"></script>
+    <script src="./app/views/produtos/jquery.dataTables.min.js"></script>
+    <script src="./app/views/produtos/script.js"></script>
+
+    
+</body>
+</html>
